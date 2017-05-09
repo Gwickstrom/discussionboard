@@ -1,0 +1,32 @@
+<body ng-controller = "loginController">
+	<form ng-model = "registration" ng-submit = "register()">
+	{{errors.first_name.message}}
+	<input type="text" ng-model = "registration.first_name" placeholder="first name" >	    
+	{{errors.email.message}}
+	<input type="email"  ng-model = "registration.email" placeholder= "email">
+	{{errors.password.message}}
+	<input type="password"  ng-model = "registration.password" placeholder= "password">
+	<input type="password" ng-model = "registration.confirm_password" placeholder= "confirm password">
+	<input type="submit" value = "register">
+	</form>
+</br>
+	<form ng-model = "userLogin" ng-submit = "login()">
+		{{errors.login_reg.message}}
+		<input type="email" ng-model= "userLogin.email" placeholder="email" /><br />
+		<input type="password" ng-model = "userLogin.password" placeholder="password" />
+		<input  type="submit" value="login" />
+	</form>
+<h3>Hello!<br/>Please enter your name to join and share your ideas!</h3>
+
+<form class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-md-2">User Name</label>
+		<div class="col-md-4">
+			<input class="form-control" ng-model="user.name" placeholder="Your Name..."/>
+		</div>
+	</div>
+	<div class="form-group">
+		<!-- <a href="#/dashboard"> --><button class="btn btn-primary col-md-1 col-md-offset-5" ng-click="checkUser(user)">Submit</button><!-- </a> -->
+	</div>
+</div>
+</body>
