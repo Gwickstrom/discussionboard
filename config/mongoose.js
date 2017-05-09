@@ -1,7 +1,8 @@
 var mongoose = require("mongoose");
 var fs = require("fs");
 
-mongoose.connect("mongodb://localhost/discussion_board3");
+mongoose.connect(process.env.MONGOLAB_URI);
+// mongoose.connect("mongodb://localhost/discussion_board3");
 
 var models_path = __dirname + "/../server/models";
 

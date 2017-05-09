@@ -30,7 +30,6 @@ app.set('views', path.join(__dirname, './client'));
 app.set('view engine', 'ejs');
 
 require("./config/mongoose.js");
-mongoose.connect(process.env.MONGOLAB_URI);
 
 io = require('socket.io').listen(server);
 
