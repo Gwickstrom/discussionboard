@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var app = express();
 //new stuff below
 var pg = require('pg');
+var con = require('./connection');
+var Add = mongoose.model('add', model,'user');
 //new stuff above
 var server = app.listen(8000, function() {
 	console.log("listening on port 8000");
